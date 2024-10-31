@@ -7,7 +7,7 @@ def tonum(s):
     try:
         return int(s)
     except:
-        ans += float(s)
+        return float(s)
 
 
 ans = 0
