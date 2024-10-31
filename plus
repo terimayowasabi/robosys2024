@@ -3,8 +3,7 @@
 
 import sys
 
-
-def tonum(s)
+def tonum(s):
     try:
         return int(s)
     except:
