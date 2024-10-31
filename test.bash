@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash 
 # SPDX-FileCopyrightText: 2024 Tomoya Suzuki
 
 ng () {
