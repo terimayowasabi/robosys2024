@@ -3,6 +3,7 @@
 
 import sys
 
+
 def tonum(s):
     try:
         return int(s)
