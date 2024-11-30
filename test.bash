@@ -20,7 +20,7 @@ out=$(echo | ./plus)
 [ "${out}" = "" ] || ng "$LINENO"
 
 out=$(cat nums | tr ' ' '\n' | ./analysis > ans)
-[ "$?" = 1 ]      || ng "$LINENO"
+[ "$?" = 0 ]      || ng "$LINENO"
 [ "${out}" = "" ] || ng "$LINENO"
 
 [ "$res" = 0 ] && echo OK
