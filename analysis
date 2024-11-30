@@ -19,6 +19,8 @@ for i in range(num):                   #range関数で０～num-1までの数列
             des[s] = des[s+1]
             des[s+1] = a
 
+
+
 for i in range(num):                   #降べきの順を出力
     print(des[i])
     
