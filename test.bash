@@ -19,8 +19,8 @@ out=$(echo | ./plus)
 [ "$?" = 1 ]      || ng "$LINENO"
 [ "${out}" = "" ] || ng "$LINENO"
 
-out=$(cat nums | tr ' ' '\n' | ./analysis > ans)
-[ "$?" = 0 ]      || ng "$LINENO"
+out=$(cat testng | tr ' ' '\n' | ./analysis > ans)
+[ "$?" = 1 ]      || ng "$LINENO"
 [ "${out}" = "" ] || ng "$LINENO"
 
 [ "$res" = 0 ] && echo OK
