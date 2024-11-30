@@ -3,9 +3,11 @@
 
 import sys
 
+
 mid , ave , x, num= 0.0, 0.0, 0.0, 0
 des =[]                                #空のリスト作成
-for n in sys.stdin:                    #１行ずつファイルから読み込み
+
+for n in sys.stdin:                    #１行ずつファイルから読み込み 
     x += float(n)
     des.append(float(n))               #append関数でリストの末尾にnを追加
     num += 1
@@ -13,18 +15,15 @@ for n in sys.stdin:                    #１行ずつファイルから読み込�
 ave = x/num                            #平均計算
 
 for i in range(num):                   #range関数で０～num-1までの数列を作る
-    for s in range(num-(i+1)):         #降べきの順に変換　バブルソート
-        if des[s] > des[s+1]:
-            a = des[s]
-            des[s] = des[s+1]
-            des[s+1] = a
-
-
+    for j in range(num-(i+1)):         #降べきの順に変換　バブルソート
+        if des[j] > des[j+1]:
+            a = des[j]
+            des[j] = des[j+1]
+            des[j+1] = a
 
 for i in range(num):                   #降べきの順を出力
     print(des[i])
     
-
 if num%2 == 0:                         #中央値の計算　偶数奇数で分ける
     n = num/2 - 1                      #リストの最初は0なので１ずらす
     m = num/2
