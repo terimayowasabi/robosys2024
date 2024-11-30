@@ -31,9 +31,9 @@ git config --global user.email "emailのメアド"
 ```
 エディタの登録も行う。
 `git config --global core.editor Vim`  ←エディタVimで登録した例
-
+```
 https://github.com/terimayowasabi/robosys2024.git
-
+```
 
 上記のURLをコピーして、端末で  `git clone <コピーしたURL>`  と入力して実行するとダウンロードできます。
 `cd <リポジトリ名> ` でリポジトリに移動
@@ -48,6 +48,7 @@ https://github.com/terimayowasabi/robosys2024.git
 # サンプル
 
 #plusコマンド
+
   seq 5 | ./plus
 　15
 
@@ -59,6 +60,7 @@ cat ans
 `58.5` 
 
 #analysisコマンド
+
 `seq 5 | ./plus > ans`
 ```  
 [1.0, 2.0, 3.0, 4.0, 5.0]
