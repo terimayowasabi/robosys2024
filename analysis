@@ -21,6 +21,7 @@ for i in range(num):                   #range関数で０～num-1までの数列
 
 for i in range(num):                   #降べきの順を出力
     print(des[i])
+    
 
 if num%2 == 0:                         #中央値の計算　偶数奇数で分ける
     n = num/2 - 1                      #リストの最初は0なので１ずらす
