@@ -3,15 +3,17 @@
 
 import sys
 
-mid , ave ,num, x= 0.0, 0.0, 0.0, 0.0
+mid , ave , x, num= 0.0, 0.0, 0.0, 0
+des =[]
 for n in sys.stdin:
     x += float(n)
+    des.append(float(n))
     num += 1
-    des[int(num)] = float(n)
-
-for i in range(int(num)):
-    print(des[int(num)])    
 
 ave = x/num
+
+for i in des:
+    print(i)
+    
 
 print(ave)
