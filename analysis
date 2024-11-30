@@ -21,8 +21,7 @@ for i in range(num):                   #range関数で０～num-1までの数列
             des[j] = des[j+1]
             des[j+1] = a
 
-for i in range(num):                   #降べきの順を出力
-    print(des[i])
+print(des[0:num])                      #降べきの順を出力
     
 if num%2 == 0:                         #中央値の計算　偶数奇数で分ける
     n = num/2 - 1                      #リストの最初は0なので１ずらす
@@ -34,11 +33,7 @@ else:
     mid = des[int(p)]
 
 print(" ")
-print("中央値")
-print(mid)
-print("平均値")
-print(ave)
-print("最大値")
-print(des[num-1])
-print("最小値")
-print(des[0])
+print("中央値:" + str(mid))             #strコマンドで文字列に変換
+print("平均値:" + str(ave))
+print("最大値:" + str(des[num-1]))
+print("最小値:" + str(des[0]))
