@@ -23,23 +23,27 @@
 
 
 ## プロジェクトをローカルリポジトリ環境にダウンロード
-端末で  git  と打ってツールがないとエラーが出た場合は  sudo apt install git  のコマンドでインストール
+端末で ` git ` と打ってツールがないとエラーが出た場合は ` sudo apt install git ` のコマンドでインストール
 自身の名前、emailアドレスを登録
-  git config --global user.name "名前"
-  git config --global user.email "emailのメアド"
+```
+git config --global user.name "名前"
+git config --global user.email "emailのメアド"
+```
 エディタの登録も行う。
-  git config --global core.editor Vim  ←エディタVimで登録した例
+`git config --global core.editor Vim`  ←エディタVimで登録した例
 
 https://github.com/terimayowasabi/robosys2024.git
-上記のURLをコピーして、端末で  git clone <コピーしたURL>  と入力して実行するとダウンロードできます。
-  cd <リポジトリ名>  でリポジトリに移動
-  ls -a  コマンドを入力してファイルがちゃんとあるか確認してください。
+
+
+上記のURLをコピーして、端末で  `git clone <コピーしたURL>`  と入力して実行するとダウンロードできます。
+`cd <リポジトリ名> ` でリポジトリに移動
+`ls -a ` コマンドを入力してファイルがちゃんとあるか確認してください。
 
 
 ## 利用方法
 共通事項
-  chmod +x <ファイル名>  で実行権限を取得してください。
-  行で読み込みなのでnumsに入力して  tr ' ' '\n'  を使い空白を改行に変えて利用してください。
+`chmod +x <ファイル名>`  で実行権限を取得してください。
+行で読み込みなのでnumsに入力して ` tr ' ' '\n' ` を使い空白を改行に変えて利用してください。
 
 # サンプル
 
@@ -47,44 +51,35 @@ https://github.com/terimayowasabi/robosys2024.git
   seq 5 | ./plus
 　15
 
-  echo 36 18 1.5 3 > nums
-  cat nums | tr ' ' '\n' | ./plus > ans
-  cat ans
-  58.5 
+```
+echo 36 18 1.5 3 > nums
+cat nums | tr ' ' '\n' | ./plus > ans
+cat ans
+```
+`58.5` 
 
 #analysisコマンド
-  seq 5 | ./plus > ans
-  1.0
-  2.0
-  3.0
-  4.0
-  5.0
+`seq 5 | ./plus > ans`
+```  
+[1.0, 2.0, 3.0, 4.0, 5.0]
 
-  中央値
-  3.0
-  平均値
-  3.0
-  最大値
-  5.0
-  最小値
-  1.0
-
-  cat nums | tr ' ' '\n' | ./analysis > ans
-  cat ans
-  1.5
-  3.0
-  18.0
-  36.0
+中央値:3.0
+平均値:3.0
+最大値:5.0
+最小値:1.0
+```
+```  
+cat nums | tr ' ' '\n' | ./analysis > ans
+cat ans
+```
+```  
+[1.5, 3.0, 18.0, 36.0]
  
-  中央値
-  10.5
-  平均値
-  14.625
-  最大値
-  36.0
-  最小値
-  1.5 
- 
+中央値:10.5
+平均値:14.625
+最大値:36.0
+最小値:1.5 
+``` 
 
 ## ライセンス
 
