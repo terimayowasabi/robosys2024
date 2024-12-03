@@ -24,13 +24,7 @@
 
 ## プロジェクトをローカルリポジトリ環境にダウンロード
 端末で ` git ` と打ってツールがないとエラーが出た場合は ` sudo apt install git ` のコマンドでインストール
-自身の名前、emailアドレスを登録
-```
-git config --global user.name "名前"
-git config --global user.email "emailのメアド"
-```
-エディタの登録も行う。
-`git config --global core.editor Vim`  ←エディタVimで登録した例
+
 ```
 https://github.com/terimayowasabi/robosys2024.git
 ```
@@ -60,8 +54,9 @@ cat ans
 `58.5` 
 
 #analysisコマンド
-
-`seq 5 | ./plus > ans`
+```
+seq 5 | ./analysis > ans
+cat ans
 ```  
 [1.0, 2.0, 3.0, 4.0, 5.0]
 
@@ -86,7 +81,6 @@ cat ans
 ## ライセンス
 
 ーこのソフトウェアパッケージは、3条項BSDライセンスの下、再頒布および使用が許可されます。
-ーこのパッケージは、Tomoya Suzuki由来のコード（© 2024 Tomoya Suzuki）を利用しています。
 ーこのパッケージのコードは、下記のスライド（CC-BY-SA 4.0 by Ryuichi Ueda)のものを、本人の許可を得て自身の著作としたものです。
-  ー[ryuichiueda/my_slides robosys_2024](https://github.com/ryuichiueda/my_slides/tree/master/robosys_2024)
+  ー[ryuichiueda/my_slides robosys_2022](https://github.com/ryuichiueda/my_slides/tree/master/robosys_2022)
 ー©　2024 Tomoya Suzuki
