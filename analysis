@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 # SPDX-FileCopyrightText: 2024 Tomoya Suzuki
+# SPDX-License-Identifier: BSD-3-Clause
 
 import sys
 
@@ -12,8 +13,6 @@ for n in sys.stdin:                    #１行ずつファイルから読み込�
     des.append(float(n))               #append関数でリストの末尾にnを追加
     num += 1
 
-ave = x/num                            #平均計算
-
 for i in range(num):                   #range関数で０～num-1までの数列を作る
     for j in range(num-(i+1)):         #降べきの順に変換　バブルソート
         if des[j] > des[j+1]:
@@ -23,6 +22,8 @@ for i in range(num):                   #range関数で０～num-1までの数列
 
 print(des[0:num])                      #降べきの順を出力
     
+ave = x/num                            #平均計算
+
 if num%2 == 0:                         #中央値の計算　偶数奇数で分ける
     n = num/2 - 1                      #リストの最初は0なので１ずらす
     m = num/2
@@ -33,7 +34,5 @@ else:
     mid = des[int(p)]
 
 print(" ")
-print("中央値:" + str(mid))             #strコマンドで文字列に変換
-print("平均値:" + str(ave))
-print("最大値:" + str(des[num-1]))
-print("最小値:" + str(des[0]))
+print("中央値:" + str(mid) + "  平均値:" + str(ave) + "  最大値:" + str(des[num-1]) + "  最小値:" + str(des[0]))
+#strコマンドで文字列に変換
