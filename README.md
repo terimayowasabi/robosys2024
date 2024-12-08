@@ -59,7 +59,7 @@ cat ans
 ```
 `58.5` 
 
-####analysisコマンド
+#### analysisコマンド
 ```
 seq 5 | ./analysis > ans
 cat ans
