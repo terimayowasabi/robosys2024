@@ -4,6 +4,7 @@
 
 ## 概要
 主な機能として足し算と、複数の数字の平均、中央値、分散、最大・最小値、降べきの順への並べ替えがあります。
+
 ブランチがmain とdevの二つあり、おもにdevを開発用として利用しています。
 
 ## テスト環境
@@ -38,12 +39,15 @@ https://github.com/terimayowasabi/robosys2024.git
 
 ## 利用方法
 共通事項
+
 `chmod +x <ファイル名>`  で実行権限を取得してください。
+
 行で読み込みなのでnumsに入力して ` tr ' ' '\n' ` を使い空白を改行に変えて利用してください。
 
-# サンプル
+## サンプル
 
-#plusコマンド
+#### plusコマンド
+
 `seq 5 | ./plus`
 
 `15`
@@ -55,7 +59,7 @@ cat ans
 ```
 `58.5` 
 
-#analysisコマンド
+####analysisコマンド
 ```
 seq 5 | ./analysis > ans
 cat ans
@@ -71,6 +75,9 @@ cat ans
 ## ライセンス
 
 ーこのソフトウェアパッケージは、3条項BSDライセンスの下、再頒布および使用が許可されます。
+
 ーこのパッケージのコードは、下記のスライド（CC-BY-SA 4.0 by Ryuichi Ueda)のものを、本人の許可を得て自身の著作としたものです。
+
   ー[ryuichiueda/my_slides robosys_2022](https://github.com/ryuichiueda/my_slides/tree/master/robosys_2022)
+
 ー©　2024 Tomoya Suzuki
