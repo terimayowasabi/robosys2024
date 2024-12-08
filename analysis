@@ -16,7 +16,6 @@ mid , ave , x, dissum, disper, num= 0.0, 0.0, 0.0, 0.0, 0.0, 0
 des =[]                                #空のリスト作成
 
 for n in sys.stdin:                    #１行ずつファイルから読み込み 
-#    n = n.rstrip()                     #右側の（）内の文字を除去
     x += tonum(n)
     des.append(tonum(n))               #append関数でリストの末尾にnを追加
     num += 1
