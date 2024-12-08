@@ -5,12 +5,22 @@
 import sys
 
 
+def tonum(s):                         #def で関数を定義　tonumという関数を作る
+    try:                              #例外処理　intが無理ならfloatに変換    
+        return int(s)
+    except:
+        return float(s)
+#    except :
+
+
+
 mid , ave , x, num= 0.0, 0.0, 0.0, 0
 des =[]                                #空のリスト作成
 
 for n in sys.stdin:                    #１行ずつファイルから読み込み 
-    x += float(n)
-    des.append(float(n))               #append関数でリストの末尾にnを追加
+    n = n.rstrip()                     #右側の（）内の文字を除去
+    x += tonum(n)
+    des.append(tonum(n))               #append関数でリストの末尾にnを追加
     num += 1
 
 for i in range(num):                   #range関数で０～num-1までの数列を作る
@@ -19,8 +29,6 @@ for i in range(num):                   #range関数で０～num-1までの数列
             a = des[j]
             des[j] = des[j+1]
             des[j+1] = a
-
-print(des[0:num])                      #降べきの順を出力
     
 ave = x/num                            #平均計算
 
@@ -33,6 +41,6 @@ else:
     p = num/2 - 0.5
     mid = des[int(p)]
 
-print(" ")
-print("中央値:" + str(mid) + "  平均値:" + str(ave) + "  最大値:" + str(des[num-1]) + "  最小値:" + str(des[0]))
+print(str(des[0::]) + "   " + "中央値:" + str(mid) + "  平均値:" + str(ave) + "  最大値:" + str(des[num-1]) + "  最小値:" + str(des[0]))
 #strコマンドで文字列に変換
+
