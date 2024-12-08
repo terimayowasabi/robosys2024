@@ -12,11 +12,11 @@ def tonum(s):                         #def で関数を定義　tonumという�
         return float(s)
 
 
-mid , ave , x, num= 0.0, 0.0, 0.0, 0
+mid , ave , x, dissum, disper, num= 0.0, 0.0, 0.0, 0.0, 0.0, 0
 des =[]                                #空のリスト作成
 
 for n in sys.stdin:                    #１行ずつファイルから読み込み 
-    n = n.rstrip()                     #右側の（）内の文字を除去
+#    n = n.rstrip()                     #右側の（）内の文字を除去
     x += tonum(n)
     des.append(tonum(n))               #append関数でリストの末尾にnを追加
     num += 1
@@ -30,6 +30,11 @@ for i in range(num):                   #range関数で０～num-1までの数列
     
 ave = x/num                            #平均計算
 
+for m in range(num):                   #分散
+    dissum += (des[m] - ave)**2        #べき乗は**
+
+disper = dissum/num
+
 if num%2 == 0:                         #中央値の計算　偶数奇数で分ける
     n = num/2 - 1                      #リストの最初は0なので１ずらす
     m = num/2
@@ -39,6 +44,6 @@ else:
     p = num/2 - 0.5
     mid = des[int(p)]
 
-print(str(des[0::]) + "   " + "中央値:" + str(mid) + "  平均値:" + str(ave) + "  最大値:" + str(des[num-1]) + "  最小値:" + str(des[0]))
+print(str(des[0::]) + "   " + "中央値:" + str(mid) + "  平均値:" + str(ave) + "　分散:" + str(disper) + "  最大値:" + str(des[num-1]) + "  最小値:" + str(des[0]))
 #strコマンドで文字列に変換
 
