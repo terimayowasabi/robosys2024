@@ -10,8 +10,6 @@ def tonum(s):                         #def で関数を定義　tonumという�
         return int(s)
     except:
         return float(s)
-#    except :
-
 
 
 mid , ave , x, num= 0.0, 0.0, 0.0, 0
